@@ -3,7 +3,7 @@
  *        The number of tokens that have not yet been
  *        taken. Your goal is to take the last
  *        remaining token, as soon as this is possible.
- * @param {number} maxTokensToTake 
+ * @param {number} maxTokensToTake
  *        The maximum number of tokens that you can
  *        take, as defined by the MAX_TAKEN constant
  *        in index.js
