@@ -2,19 +2,20 @@ const path = require('path');
 const fs = require('fs');
 
 const players = fs.readdirSync(__dirname)
-                  .filter( item => fs.lstatSync(item).isDirectory() )
+                  .filter( item => (
+                     item[0]!=="."&& fs.lstatSync(item).isDirectory())
+                   )
                   .map( name => {
                     const player = require(`./${name}/index`)
                     return player(name)
                   })
-
 
 const playGame = (players) => {
   let rounds = 100
   const wins = [0, 0]
 
   while(rounds--) {
-    console.log("************************")
+    console.log("************************\nThere are 12 tokens")
 
     let tokensRemaining = 12
     let player = Math.floor(Math.random() * 2)
