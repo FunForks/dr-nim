@@ -109,6 +109,7 @@ Modify the Dr Nim repo so that it can play the classic game of Nim.
    * You can fine-tune the other `player` function to always make the best move, so that it will always win.
 3. Modify the `index.js` script:
    * It should send the `player` functions an array argument, representing the current state of play.
+   * It should detect if a `player` function sends an illegal response or fails to respond, and halt the game in this case.
    * It should update this array, following the instructions in the object return by the call to the `player` function.
    * It should use console.log() to display the current state of the game in the Terminal window after each turn.
    * It should announce the winner of each round.
